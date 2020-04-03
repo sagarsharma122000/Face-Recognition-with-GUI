@@ -7,7 +7,7 @@ def register_face():
     import cv2
     import numpy as np
 
-    face_classifier = cv2.CascadeClassifier('C:/Users/SAGAR SHARMA/Desktop/reading material/sem4/Projects/AI/haarcascade_frontalface_default.xml')
+    face_classifier = cv2.CascadeClassifier('C:/Users/DELL/Desktop/AI/haarcascade_frontalface_default.xml')
 
     def face_extractor(img):
         gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -31,7 +31,7 @@ def register_face():
             face = cv2.resize(face_extractor(frame),(200,200))
             face = cv2.cvtColor(face,cv2.COLOR_BGR2GRAY)
 
-            file_path = 'C:/Users/SAGAR SHARMA/Desktop/reading material/sem4/Projects/AI/SAMPLES/user'+str(count)+'.jpg'
+            file_path = 'C:/Users/DELL/Desktop/AI/SAMPLES/'+str(count)+'.jpg'
             cv2.imwrite(file_path,face)
 
             cv2.putText(face,str(count),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,250,0),2)
@@ -55,7 +55,7 @@ def verify_face():
     from os import listdir
     from os.path import isfile, join
 
-    data_path = 'C:/Users/SAGAR SHARMA/Desktop/reading material/sem4/Projects/AI/SAMPLES/'
+    data_path = 'C:/Users/DELL/Desktop/AI/SAMPLES/'
     onlyfiles = [f for f in listdir(data_path) if isfile(join(data_path,f))]
 
     Training_Data, Labels = [], []
@@ -74,7 +74,7 @@ def verify_face():
 
     print("Model Training Complete!!!!!")
 
-    face_classifier = cv2.CascadeClassifier('C:/Users/SAGAR SHARMA/Desktop/reading material/sem4/Projects/AI/haarcascade_frontalface_default.xml')
+    face_classifier = cv2.CascadeClassifier('C:/Users/DELL/Desktop/AI/haarcascade_frontalface_default.xml')
 
     def face_detector(img, size = 0.5):
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
