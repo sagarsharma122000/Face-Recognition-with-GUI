@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-face_classifier = cv2.CascadeClassifier('C:/Users/SAGAR SHARMA/Desktop/reading material/sem4/Projects/AI/haarcascade_frontalface_default.xml')
+face_classifier = cv2.CascadeClassifier('C:/Users/DELL/Desktop/AI/haarcascade_frontalface_default.xml')
 
 def face_extractor(img):
     gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -25,7 +25,7 @@ while True:
         face = cv2.resize(face_extractor(frame),(200,200))
         face = cv2.cvtColor(face,cv2.COLOR_BGR2GRAY)
 
-        file_path = 'C:/Users/SAGAR SHARMA/Desktop/reading material/sem4/Projects/AI/SAMPLES/user'+str(count)+'.jpg'
+        file_path = 'C:/Users/DELL/Desktop/AI/SAMPLES/'+str(count)+'.jpg'
         cv2.imwrite(file_path,face)
 
         cv2.putText(face,str(count),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,250,0),2)
