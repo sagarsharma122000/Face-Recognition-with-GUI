@@ -3,7 +3,7 @@ import numpy as np
 from os import listdir
 from os.path import isfile, join
 
-data_path = 'C:/Users/SAGAR SHARMA/Desktop/reading material/sem4/Projects/AI/SAMPLES/'
+data_path = 'C:/Users/DELL/Desktop/AI/SAMPLES/'
 onlyfiles = [f for f in listdir(data_path) if isfile(join(data_path,f))]
 
 Training_Data, Labels = [], []
@@ -22,7 +22,7 @@ model.train(np.asarray(Training_Data), np.asarray(Labels))
 
 print("Model Training Complete!!!!!")
 
-face_classifier = cv2.CascadeClassifier('C:/Users/SAGAR SHARMA/Desktop/reading material/sem4/Projects/AI/haarcascade_frontalface_default.xml')
+face_classifier = cv2.CascadeClassifier('C:/Users/DELL/Desktop/AI/haarcascade_frontalface_default.xml')
 
 def face_detector(img, size = 0.5):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
