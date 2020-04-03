@@ -7,7 +7,7 @@ Then you can run the program, if you click on register_face then It will registe
 
 
 
-https://imgur.com/1S9i6RH
+https://imgur.com/a/DvFEF7T
 
 As you can see in my desktop, I have created a folder named AI
 
